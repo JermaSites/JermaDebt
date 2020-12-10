@@ -1,0 +1,24 @@
+{
+  "name": "jermadebt",
+  "version": "1.0.0",
+  "description": "Website to track Jerma985's Debt to chat",
+  "main": "scripts.js",
+  "scripts": {
+    "start": "browserify scripts.js -o bundle.js && npx serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s-crypt/JermaDebt.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/s-crypt/JermaDebt/issues"
+  },
+  "homepage": "https://github.com/s-crypt/JermaDebt#readme",
+  "dependencies": {
+    "number-to-words": "^1.2.4",
+    "serve": "^11.3.2",
+    "title-case": "^3.0.3"
+  }
+}
