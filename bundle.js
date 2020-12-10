@@ -67,7 +67,7 @@ exports.titleCase = titleCase;
 var converter = require('number-to-words');
 var titleCase = require("title-case");
 
-var debt = Number(' 6969696969 ');
+var debt = Number(' 4549301430 ');
 
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -77,5 +77,5 @@ var debtCounterNum = document.getElementById("debtCounterNum");
 var debtCounterText = document.getElementById("debtCounterText");
 
 debtCounterNum.innerHTML = numberWithCommas(debt);
-debtCounterText.innerHTML = titleCase.titleCase(converter.toWords(debt)).replace(/, and/g, '<br>') + '.';
+debtCounterText.innerHTML = titleCase.titleCase(converter.toWords(debt)).replace(/, and/g, '<br>');
 },{"number-to-words":1,"title-case":2}]},{},[3]);
