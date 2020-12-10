@@ -4,7 +4,7 @@
   "description": "Website to track Jerma985's Debt to chat",
   "main": "scripts.js",
   "scripts": {
-    "start": "browserify scripts.js -o bundle.js && npx serve"
+    "start": "browserify scripts.js -p esmify > bundle.js && npx serve"
   },
   "repository": {
     "type": "git",
@@ -17,8 +17,13 @@
   },
   "homepage": "https://github.com/s-crypt/JermaDebt#readme",
   "dependencies": {
+    "browser-resolve": "^2.0.0",
+    "number-flip": "^1.1.8",
     "number-to-words": "^1.2.4",
     "serve": "^11.3.2",
     "title-case": "^3.0.3"
+  },
+  "devDependencies": {
+    "esmify": "^2.1.1"
   }
 }

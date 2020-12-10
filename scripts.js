@@ -1,5 +1,6 @@
 var converter = require('number-to-words');
-var titleCase = require("title-case");
+import { titleCase } from "title-case";
+import { Flip } from 'number-flip'
 
 var debt = Number(' 4549301430 ');
 
@@ -10,5 +11,13 @@ function numberWithCommas(x) {
 var debtCounterNum = document.getElementById("debtCounterNum");
 var debtCounterText = document.getElementById("debtCounterText");
 
-debtCounterNum.innerHTML = numberWithCommas(debt);
-debtCounterText.innerHTML = titleCase.titleCase(converter.toWords(debt)).replace(/, and/g, '<br>');
+new Flip({
+  node: document.getElementById("debtCounterNum"),
+  from: 0,
+  to: debt,
+  separator: ',',
+  duration: 2 // second
+})
+
+//debtCounterNum.innerHTML = numberWithCommas(debt);
+debtCounterText.innerHTML = titleCase(converter.toWords(debt)).replace(/, and/g, '<br>');
