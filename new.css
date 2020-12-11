@@ -1,19 +1,18 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 body {
 	margin: 0px;
 }
-
+/* Header Bar and Text */
 header {
 	text-align: center;
 	padding: 5px;
 	font-weight: normal;
 	background-color: #69bbc3;
 	color: white;
-	font-family: 'Open Sans',sans-serif;
-	height: 15vh;
+	font-family: 'Ubuntu',sans-serif;
+	height: 11vh;
 	font-size: 3vh;
 	display: flex;
     justify-content: center;
@@ -33,30 +32,33 @@ header {
     align-items: center;
 	flex-direction: column;
 	color: #ffffff;
-	font-family: 'Open Sans',sans-serif;
+	font-family: 'Ubuntu',sans-serif;
 }
 
 .dataDisplay > h1 {
 	margin: 10px;
-	font-size: 10vw;
+	font-size: 900%;
 }
-
+/* Amount in Words */
 .dataDisplay > h2 {
+	text-align: center;
+	line-height: 200%;
 	margin: 5px;
-	font-size: 170%;
+	font-size: 150%;
 }
-
+/* History of the debt text */
 article {
-	font-family: open sans,sans-serif;
-	font-size: 2em;
+	font-family: 'Ubuntu',sans-serif;
+	font-size: 150%;
+	line-height: 200%;
 	text-align: center;
 	background-color: #404040;
 	color: white;
 }
 
 article > div {
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 50px;
+	padding-bottom: 50px;
 	padding-left: 10%;
 	padding-right: 10%;
 }
@@ -72,39 +74,42 @@ lh {
 	padding-top: 20px;
 }
 
-/*
+
 .paid > li {
-	margin-left: 25%;
+	font-size: 90%;
+	margin-top: 10px;
 }
-*/
+
 
 .paid > .lh {
 	text-align: left;
 	text-align: center;
+	font-size: 100%;
 	width: 100vw;
 	background-color: #003A00;
 	margin-left: -10.5vw;
 	margin-top: -20px;
 }
-
+/* Debt Added Text */
 .added {
 	text-align: left;
 	background-color: darkred;
 }
-
+/* Debt Added Title */
 .added > .lh {
 	text-align: center;
 	width: 100vw;
 	background-color: #510000;
 	margin-left: -10.5vw;
-	margin-top: -20px;
+	margin-top: -50px;
 }
 
-/*
+
 .added > li {
-	margin-left: 25%;
+	font-size: 90%;
+	margin-top: 10px;
 }
-*/
+
 
 html, body {
     max-width: 100%;
