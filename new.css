@@ -12,7 +12,7 @@ header {
 	font-weight: normal;
 	background-color: #69bbc3;
 	color: white;
-	font-family: 'Open Sans',sans-serif;
+	font-family: Roboto,sans-serif;
 	height: 15vh;
 	font-size: 3vh;
 	display: flex;
@@ -37,17 +37,19 @@ header {
 }
 
 .dataDisplay > h1 {
+	font-family: Ubuntu, sans-serif;
 	margin: 10px;
 	font-size: 10vw;
 }
 
 .dataDisplay > h2 {
+	font-family: Ubuntu, sans-serif;
 	margin: 5px;
 	font-size: 170%;
 }
 
 article {
-	font-family: open sans,sans-serif;
+	font-family: Ubuntu, sans-serif;
 	font-size: 2em;
 	text-align: center;
 	background-color: #404040;
