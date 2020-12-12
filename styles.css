@@ -38,7 +38,7 @@ header {
 
 .dataDisplay > h1 {
 	margin: 10px;
-	font-size: 900%;
+	font-size: 12.5vw;
 	font-weight: 700;
 }
 /* Amount in Words */
@@ -118,6 +118,11 @@ lh {
 	font-size: 97%;
 	margin-top: 15px;
 	margin-bottom: 15px;
+}
+
+footer {
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 

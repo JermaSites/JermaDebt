@@ -94,6 +94,6 @@ new _numberFlip.Flip({
 
 }); //debtCounterNum.innerHTML = numberWithCommas(debt);
 
-debtCounterText.innerHTML = (0, _titleCase.titleCase)(converter.toWords(debt)).replace(/, and/g, '<br>');
+debtCounterText.innerHTML = (0, _titleCase.titleCase)(converter.toWords(debt)).replace(/, and/g, ',<br>');
 
 },{"number-flip":1,"number-to-words":2,"title-case":3}]},{},[4]);
