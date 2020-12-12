@@ -77,7 +77,7 @@ var _numberFlip = require("number-flip");
 
 var converter = require('number-to-words');
 
-var debt = Number(' 4549301430 ');
+var debt = Number(' 4549301230 ');
 
 function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
