@@ -10,8 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/s-crypt/JermaDebt.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Thestickman391 and s-crypt",
+  "license": "MPL-2.0",
   "bugs": {
     "url": "https://github.com/s-crypt/JermaDebt/issues"
   },
