@@ -20,4 +20,4 @@ new Flip({
 })
 
 //debtCounterNum.innerHTML = numberWithCommas(debt);
-debtCounterText.innerHTML = titleCase(converter.toWords(debt)).replace(/, and/g, '<br>');
+debtCounterText.innerHTML = titleCase(converter.toWords(debt)).replace(/, and/g, ',<br>');
