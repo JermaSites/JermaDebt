@@ -120,6 +120,30 @@ lh {
 	margin-bottom: 15px;
 }
 
+a:link {
+	color: white;
+	background-color: transparent;
+	text-decoration: underline;
+  }
+  
+  a:visited {
+	color: white;
+	background-color: transparent;
+	text-decoration: underline;
+  }
+  
+  a:hover {
+	color: lightgray;
+	background-color: transparent;
+	text-decoration: underline;
+  }
+  
+  a:active {
+	color: lightslategrey;
+	background-color: transparent;
+	text-decoration: underline;
+  }
+
 footer {
 	padding-top: 15px;
 	padding-bottom: 15px;
