@@ -2,7 +2,7 @@ var converter = require('number-to-words');
 import { titleCase } from "title-case";
 import { Flip } from 'number-flip'
 
-var debt = Number(' 4549301430 ');
+var debt = Number(' 6049271305 ');
 
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
