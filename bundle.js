@@ -77,23 +77,49 @@ var _numberFlip = require("number-flip");
 
 var converter = require('number-to-words');
 
-var debt = Number(' 6049271289 ');
+function readTextFile(file) {
+  return new Promise(resolve => {
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
 
-function numberWithCommas(x) {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    rawFile.onreadystatechange = function () {
+      if (rawFile.readyState === 4) {
+        if (rawFile.status === 200 || rawFile.status == 0) {
+          var allText = rawFile.responseText;
+          resolve(allText);
+        }
+      }
+    };
+
+    rawFile.send(null);
+  });
 }
 
-var debtCounterNum = document.getElementById("debtCounterNum");
-var debtCounterText = document.getElementById("debtCounterText");
-new _numberFlip.Flip({
-  node: document.getElementById("debtCounterNum"),
-  from: 0,
-  to: debt,
-  separator: ',',
-  duration: 2 // second
+async function asyncCall() {
+  //console.log('calling');
+  const result = await readTextFile("debt.txt"); //console.log(result);
 
-}); //debtCounterNum.innerHTML = numberWithCommas(debt);
+  var resultMinusNum = result.replace(/\D/g, '');
+  var debt = Number(resultMinusNum);
 
-debtCounterText.innerHTML = (0, _titleCase.titleCase)(converter.toWords(debt)).replace(/, and/g, ',<br>');
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+  var debtCounterNum = document.getElementById("debtCounterNum");
+  var debtCounterText = document.getElementById("debtCounterText");
+  new _numberFlip.Flip({
+    node: document.getElementById("debtCounterNum"),
+    from: 0,
+    to: debt,
+    separator: ',',
+    duration: 2 // second
+
+  }); //debtCounterNum.innerHTML = numberWithCommas(debt);
+
+  debtCounterText.innerHTML = (0, _titleCase.titleCase)(converter.toWords(debt)).replace(/, and/g, ',<br>');
+}
+
+asyncCall();
 
 },{"number-flip":1,"number-to-words":2,"title-case":3}]},{},[4]);
