@@ -26,7 +26,7 @@ header {
 }
 
 
-.dataDisplay {
+.data-display {
 	height: 89vh;
 	background-image:url("images/jermass.png");
 	backdrop-filter: blur(5px);
