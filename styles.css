@@ -1,10 +1,15 @@
-@charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
 
-body {
-	margin: 0px;
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
+
+body {
+	margin: 0;
+}
+
 /* Header Bar and Text */
 header {
 	text-align: center;
@@ -21,7 +26,7 @@ header {
 }
 
 
-.dataDisplay {
+.data-display {
 	height: 89vh;
 	background-image:url("images/jermass.png");
 	backdrop-filter: blur(5px);
@@ -36,18 +41,20 @@ header {
 	font-family: 'Ubuntu',sans-serif;
 }
 
-.dataDisplay > h1 {
+.data-display > h1 {
 	margin: 10px;
 	font-size: 12.5vw;
 	font-weight: 700;
 }
+
 /* Amount in Words */
-.dataDisplay > h2 {
+.data-display > h2 {
 	text-align: center;
 	line-height: 200%;
 	margin: 5px;
 	font-size: 150%;
 }
+
 /* History of the debt text */
 article {
 	font-family: 'Ubuntu',sans-serif;
@@ -63,10 +70,6 @@ article > div {
 	padding-bottom: 50px;
 	padding-left: 10%;
 	padding-right: 10%;
-}
-
-lh {
-	font-weight: bold;
 }
 
 .paid {
@@ -124,33 +127,27 @@ a:link {
 	color: white;
 	background-color: transparent;
 	text-decoration: underline;
-  }
-  
-  a:visited {
+}
+
+a:visited {
 	color: white;
 	background-color: transparent;
 	text-decoration: underline;
-  }
-  
-  a:hover {
+}
+
+a:hover {
 	color: lightgray;
 	background-color: transparent;
 	text-decoration: underline;
-  }
-  
-  a:active {
+}
+
+a:active {
 	color: lightslategrey;
 	background-color: transparent;
 	text-decoration: underline;
-  }
+}
 
 footer {
 	padding-top: 15px;
 	padding-bottom: 15px;
-}
-
-
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
 }
