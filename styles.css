@@ -55,18 +55,6 @@ header {
 	font-size: 150%;
 }
 
-/* Poll Zone */
-.poll {
-	font-family: 'Ubuntu',sans-serif;
-	font-size: 100%;
-	line-height: 0px;
-	padding: 35px;
-	text-align: center;
-	background-color: #353535;
-	color: white;
-}
-
-
 /* History of the debt text */
 article {
 	font-family: 'Ubuntu',sans-serif;
@@ -82,6 +70,16 @@ article > div {
 	padding-bottom: 50px;
 	padding-left: 10%;
 	padding-right: 10%;
+}
+/* Poll Zone */
+.notice {
+	font-family: 'Ubuntu',sans-serif;
+	font-size: 100%;
+	line-height: 0px;
+	padding: 35px;
+	text-align: center;
+	background-color: #353535;
+	color: white;
 }
 
 .paid {
