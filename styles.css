@@ -154,25 +154,21 @@ article > div {
 a:link {
 	color: white;
 	background-color: transparent;
-	text-decoration: underline;
 }
 
 a:visited {
 	color: white;
 	background-color: transparent;
-	text-decoration: underline;
 }
 
 a:hover {
 	color: lightgray;
 	background-color: transparent;
-	text-decoration: underline;
 }
 
 a:active {
 	color: lightslategrey;
 	background-color: transparent;
-	text-decoration: underline;
 }
 
 footer {
@@ -180,7 +176,11 @@ footer {
 	padding-bottom: 15px;
 }
 
-.head-link,
+.head-link{
+	color: white;
+	background-color: transparent;
+	text-decoration: none;
+}
 .head-link:visited,
 .head-link:active {
 	color: white;
