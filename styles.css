@@ -22,7 +22,7 @@ header {
 	font-size: 3vh;
 	display: flex;
     justify-content: center;
-    align-items: center;
+	align-items: center;
 }
 
 
@@ -178,4 +178,28 @@ a:active {
 footer {
 	padding-top: 15px;
 	padding-bottom: 15px;
+}
+
+a > .head:link {
+	color: white;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+a > .head:visited {
+	color: white;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+a > .head:hover {
+	color: white;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+a > .head:active {
+	color: white;
+	background-color: transparent;
+	text-decoration: none;
 }

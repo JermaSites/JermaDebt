@@ -9,4 +9,4 @@ Make a PR or File an Issue if you want something changed! :)
 Submit a PR with
 
 * The reason in index.html as part of the list
-* Changed count in debt.txt (commas and a dollar sign are allowed but not required)
+* Changed count in debt.txt
