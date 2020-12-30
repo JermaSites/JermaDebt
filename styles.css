@@ -180,25 +180,16 @@ footer {
 	padding-bottom: 15px;
 }
 
-a > .head:link {
+.head-link,
+.head-link:visited,
+.head-link:active {
 	color: white;
 	background-color: transparent;
 	text-decoration: none;
 }
 
-a > .head:visited {
-	color: white;
-	background-color: transparent;
-	text-decoration: none;
-}
-
-a > .head:hover {
-	color: white;
-	background-color: transparent;
-	text-decoration: none;
-}
-
-a > .head:active {
+.head-link:hover,
+.head-link:focus {
 	color: white;
 	background-color: transparent;
 	text-decoration: none;
