@@ -1,0 +1,12 @@
+# https://github.com/browserslist/browserslist#readme
+# Base setup for any Project (original from https://github.com/GrimLink/dotfiles/)
+#
+# The first 3 give the best default support
+# The percentage is the best solution to support browsers that are used
+# The iOS setting makes sure we also get the last 3 version for Safari
+# Run npx browserslist to see what is supported
+
+last 1 version
+> 2%
+not dead
+last 3 iOS major versions
