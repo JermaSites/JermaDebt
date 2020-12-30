@@ -174,7 +174,11 @@ footer {
     padding-bottom: 15px;
 }
 
-.head-link,
+.head-link{
+	color: white;
+	background-color: transparent;
+	text-decoration: none;
+}
 .head-link:visited,
 .head-link:active {
     color: white;
