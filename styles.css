@@ -128,6 +128,24 @@ article > div {
 	margin-bottom: 5px;
 }
 
+/* Invalidated Added Body */
+.invalid {
+	text-align: left;
+	padding-top: 20px;
+	padding-bottom: 1px;
+	background-color: #a43500;
+}
+/* Debt Invalidated Title */
+.invalid > .lh {
+	text-align: left;
+	text-align: center;
+	font-size: 105%;
+	width: 100vw;
+	background-color: #8d2f00;
+	margin-left: -10.5vw;
+	margin-top: -50px;
+	margin-bottom: 5px;
+}
 
 .added > li {
 	font-size: 97%;
