@@ -2,189 +2,188 @@
 
 /* START GITHUB */
 .github-corner:hover .octo-arm {
-    animation: octocat-wave 560ms ease-in-out
+	animation: octocat-wave 560ms ease-in-out;
 }
 
 @keyframes octocat-wave {
+	0%,
+	100% {
+		transform: rotate(0);
+	}
 
-    0%,
-    100% {
-        transform: rotate(0)
-    }
+	20%,
+	60% {
+		transform: rotate(-25deg);
+	}
 
-    20%,
-    60% {
-        transform: rotate(-25deg)
-    }
-
-    40%,
-    80% {
-        transform: rotate(10deg)
-    }
+	40%,
+	80% {
+		transform: rotate(10deg);
+	}
 }
 
-@media (max-width:500px) {
-    .github-corner:hover .octo-arm {
-        animation: none
-    }
+@media (max-width: 500px) {
+	.github-corner:hover .octo-arm {
+		animation: none;
+	}
 
-    .github-corner .octo-arm {
-        animation: octocat-wave 560ms ease-in-out
-    }
+	.github-corner .octo-arm {
+		animation: octocat-wave 560ms ease-in-out;
+	}
 }
 
 /* END GITHUB */
 
 html,
 body {
-    max-width: 100%;
-    overflow-x: hidden;
+	max-width: 100%;
+	overflow-x: hidden;
 }
 
 body {
-    font-family: "Ubuntu", sans-serif;
-    margin: 0;
+	font-family: "Ubuntu", sans-serif;
+	margin: 0;
 }
 
 .container {
-    max-width: 1024px;
-    margin: auto auto;
-    padding: 0 5px;
+	max-width: 1024px;
+	margin: auto auto;
+	padding: 0 5px;
 }
 
 /* Header Bar and Text */
 header {
-    display: flex;
-    padding: 5px;
-    height: 11vh;
-    font-size: 21px;
-    color: white;
-    background-color: #69bbc3;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	padding: 5px;
+	height: 11vh;
+	font-size: 32px;
+	color: white;
+	background-color: #69bbc3;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
 }
 
 .data-display {
-    height: 89vh;
-    display: flex;
-    justify-content: center;
-    color: #ffffff;
-    align-items: center;
-    flex-direction: column;
-    background-image: url("images/jermass.png");
-    background-size: cover;
-    background-position-x: center;
-    background-position-y: center;
+	height: 89vh;
+	display: flex;
+	justify-content: center;
+	color: #ffffff;
+	align-items: center;
+	flex-direction: column;
+	background-image: url("images/jermass.png");
+	background-size: cover;
+	background-position-x: center;
+	background-position-y: center;
 }
 
 .data-display > h1 {
-    margin: 10px;
-    font-size: 12.5vw;
-    font-weight: 700;
+	margin: 10px;
+	font-size: 12.5vw;
+	font-weight: 700;
 }
 
 /* Amount in Words */
 .data-display > h2 {
-    text-align: center;
-    line-height: 2;
-    margin: 5px;
+	text-align: center;
+	line-height: 2;
+	margin: 5px;
 }
 
 /* History of the debt text */
 article {
-    font-size: 1.5em;
-    line-height: 1.6;
-    text-align: center;
-    background-color: #404040;
-    color: white;
+	font-size: 1.5em;
+	line-height: 1.6;
+	text-align: center;
+	background-color: #404040;
+	color: white;
 }
 
 .intro {
-    padding: 50px 0;
+	padding: 50px 0;
 }
 
 /* Poll Zone */
 .notice {
-    text-align: center;
-    padding: 15px;
-    color: white;
-    background-color: #2c2c2c;
+	text-align: center;
+	padding: 15px;
+	color: white;
+	background-color: #2c2c2c;
 }
 
 /* Block Item-List */
 .item-list > .lh {
-    width: 100%;
-    font-size: 26px;
+	width: 100%;
+	font-size: 26px;
 }
 
 .item-list ul {
-    margin: 0;
-    padding-top: 15px;
-    padding-bottom: 15px;
+	margin: 0;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 .item-list li {
-    line-height: 2;
-    text-align: left;
+	line-height: 2;
+	text-align: left;
 }
 
 .item-list.paid > .lh {
-    background-color: #003a00;
+	background-color: #003a00;
 }
 
 .item-list.paid {
-    background-color: #006400;
+	background-color: #006400;
 }
 
 .item-list.added > .lh {
-    background-color: #510000;
+	background-color: #510000;
 }
 
 .item-list.added {
-    background-color: #8b0000;
+	background-color: #8b0000;
 }
 
 .item-list.invalid > .lh {
-    background-color: #8d2f00;
+	background-color: #8d2f00;
 }
 
 .item-list.invalid {
-    background-color: #a43500;
+	background-color: #a43500;
 }
 
 .added > li {
-    font-size: 97%;
-    margin-top: 15px;
-    margin-bottom: 15px;
+	font-size: 97%;
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 a,
 a:visited {
-    color: white;
-    text-decoration: underline;
+	color: white;
+	text-decoration: underline;
 }
 
 a:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 footer {
-    padding-top: 15px;
-    padding-bottom: 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
-.head-link{
+.head-link {
 	color: white;
 	background-color: transparent;
 	text-decoration: none;
 }
 .head-link:visited,
 .head-link:active {
-    color: white;
+	color: white;
 }
 
 .head-link:hover,
 .head-link:focus {
-    text-decoration: none;
+	text-decoration: none;
 }
