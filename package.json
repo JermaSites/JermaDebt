@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/s-crypt/JermaDebt.git"
+    "url": "git+https://github.com/JermaSites/JermaDebt.git"
   },
   "author": "Thestickman391 and s-crypt",
   "license": "MPL-2.0",
   "bugs": {
-    "url": "https://github.com/s-crypt/JermaDebt/issues"
+    "url": "https://github.com/JermaSites/JermaDebt/issues"
   },
-  "homepage": "https://github.com/s-crypt/JermaDebt#readme",
+  "homepage": "https://github.com/JermaSites/JermaDebt#readme",
   "dependencies": {
     "browser-resolve": "^2.0.0",
     "number-flip": "^1.1.8",

@@ -22,7 +22,7 @@ header {
 	font-size: 3vh;
 	display: flex;
     justify-content: center;
-    align-items: center;
+	align-items: center;
 }
 
 
@@ -126,6 +126,24 @@ article > div {
 	margin-bottom: 5px;
 }
 
+/* Invalidated Added Body */
+.invalid {
+	text-align: left;
+	padding-top: 20px;
+	padding-bottom: 1px;
+	background-color: #a43500;
+}
+/* Debt Invalidated Title */
+.invalid > .lh {
+	text-align: left;
+	text-align: center;
+	font-size: 105%;
+	width: 100vw;
+	background-color: #722600;
+	margin-left: -10.5vw;
+	margin-top: -50px;
+	margin-bottom: 5px;
+}
 
 .added > li {
 	font-size: 97%;
@@ -136,28 +154,43 @@ article > div {
 a:link {
 	color: white;
 	background-color: transparent;
-	text-decoration: underline;
 }
 
 a:visited {
 	color: white;
 	background-color: transparent;
-	text-decoration: underline;
 }
 
 a:hover {
 	color: lightgray;
 	background-color: transparent;
-	text-decoration: underline;
 }
 
 a:active {
 	color: lightslategrey;
 	background-color: transparent;
-	text-decoration: underline;
 }
 
 footer {
 	padding-top: 15px;
 	padding-bottom: 15px;
+}
+
+.head-link{
+	color: white;
+	background-color: transparent;
+	text-decoration: none;
+}
+.head-link:visited,
+.head-link:active {
+	color: white;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+.head-link:hover,
+.head-link:focus {
+	color: white;
+	background-color: transparent;
+	text-decoration: none;
 }
