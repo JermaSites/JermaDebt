@@ -154,21 +154,25 @@ article > div {
 a:link {
 	color: white;
 	background-color: transparent;
+	text-decoration-style: dotted;
 }
 
 a:visited {
 	color: white;
 	background-color: transparent;
+	text-decoration-style: dotted;
 }
 
 a:hover {
 	color: lightgray;
 	background-color: transparent;
+	text-decoration-style: solid;
 }
 
 a:active {
 	color: lightslategrey;
 	background-color: transparent;
+	text-decoration-style: solid;
 }
 
 footer {
