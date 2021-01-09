@@ -89,6 +89,26 @@ article > div {
 	padding-top: 20px;
 }
 
+.visualized {
+	text-align: left;
+	background-color:  #360542;
+	padding-bottom: 30px;
+	padding-top: 20px;
+}
+
+/* Paid Title */
+.visualized > .lh {
+	text-align: left;
+	text-align: center;
+	font-size: 105%;
+	width: 100vw;
+	background-color: #4e085f;
+	margin-left: -10.5vw;
+	margin-top: -20px;
+	margin-bottom: 5px;
+}
+
+
 /* Paid Body */
 .paid > li {
 	font-size: 97%;

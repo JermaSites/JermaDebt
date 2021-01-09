@@ -18,6 +18,8 @@
   "homepage": "https://github.com/JermaSites/JermaDebt#readme",
   "dependencies": {
     "browser-resolve": "^2.0.0",
+    "browserify": "^17.0.0",
+    "chart.js": "^2.9.4",
     "number-flip": "^1.1.8",
     "number-to-words": "^1.2.4",
     "serve": "^11.3.2",

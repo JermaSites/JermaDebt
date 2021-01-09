@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>Jerma Debt Tracker</title>
@@ -35,22 +35,24 @@
 				<br>This website will track as Jerma slowly whittles away (or adds to) his debt to chat 
 				<br>This guy is <em>fucked</em>.
 			</div>
-			<div class="paid">
+			<div class="paid" id="paid">
 				<div class="lh">
 					TOTAL PAID
 				</div>
-				<ul>
-					<li>$375 - <a href="https://youtu.be/YixWlAtvNhk?t=16440">community subs</a> (75 subs)</li>
-					<li>$272,310 - <a href="https://youtu.be/USwGGyfczR8">lego studs</a>  (1 USD = 1 LS) 272,310 Lego Studs</li>
-					<li>$100 - as an <a href="https://youtu.be/MhycXVLPn7I?t=463">apology for calling Jerma a "boring man" earlier</a></li>
-					<li>$100,000,000 - <a href="https://youtu.be/ZNqtvglRdcE?t=20014">SHOWED OTTO</a> :)</li>
-					<li>$153,000 - in <a href="https://youtu.be/QIuS5aLu1_M?t=19368">pizza sales</a></li>
-					<li>$30,715.67 - for <a href="https://youtu.be/hy6DDkbKDFg?t=21185">¥3,204,259 Yen in Yakuza 0</a> (1 USD = 104.32 JPY, <a href="https://www.exchange-rates.org/Rate/USD/JPY/12-1-2020">exchange rate </a>)on December 1st 2020</li>
-					<li>$250,000,000 - for a <a href="https://youtu.be/a9uuyksatqE?t=9996">flawless reading</a> of green eggs and ham</li>
-					<li>$500,000,000 - Doing <a href="https://youtu.be/_r4U50QYbxk?t=9730">Simpsons impressions.</a> <a href="https://www.reddit.com/r/jerma985/comments/kspvwa/discussion_of_the_contested_jerma_debt_removal/">Good points are made.</a> Thanks for the feedback! :)</li>
-					<li>$450,000,000 - JermaCraft CopyPasta <a href="https://youtu.be/_r4U50QYbxk?t=10052">as the Family Guy Characters</a> (-$50m for bad impression)</li>
-					<li>$100,000,000 - Jerma tells his daily routine.
-				</ul>
+				<div class="grid">
+					<ul>
+						<li>$375 - <a href="https://youtu.be/YixWlAtvNhk?t=16440">community subs</a> (75 subs)</li>
+						<li>$272,310 - <a href="https://youtu.be/USwGGyfczR8">lego studs</a>  (1 USD = 1 LS) 272,310 Lego Studs</li>
+						<li>$100 - as an <a href="https://youtu.be/MhycXVLPn7I?t=463">apology for calling Jerma a "boring man" earlier</a></li>
+						<li>$100,000,000 - <a href="https://youtu.be/ZNqtvglRdcE?t=20014">SHOWED OTTO</a> :)</li>
+						<li>$153,000 - in <a href="https://youtu.be/QIuS5aLu1_M?t=19368">pizza sales</a></li>
+						<li>$30,715.67 - for <a href="https://youtu.be/hy6DDkbKDFg?t=21185">¥3,204,259 Yen in Yakuza 0</a> (1 USD = 104.32 JPY, <a href="https://www.exchange-rates.org/Rate/USD/JPY/12-1-2020">exchange rate </a>)on December 1st 2020</li>
+						<li>$250,000,000 - for a <a href="https://youtu.be/a9uuyksatqE?t=9996">flawless reading</a> of green eggs and ham</li>
+						<li>$500,000,000 - Doing <a href="https://youtu.be/_r4U50QYbxk?t=9730">Simpsons impressions.</a> <a href="https://www.reddit.com/r/jerma985/comments/kspvwa/discussion_of_the_contested_jerma_debt_removal/">Good points are made.</a> Thanks for the feedback! :)</li>
+						<li>$450,000,000 - JermaCraft CopyPasta <a href="https://youtu.be/_r4U50QYbxk?t=10052">as the Family Guy Characters</a> (-$50m for bad impression)</li>
+						<li>$100,000,000 - Jerma tells his daily routine.
+					</ul>
+				</div>
 			</div>
 			<div class="added">
 				<div class="lh">
@@ -72,11 +74,19 @@
 					<li>$1,000,000,000 - off debt for <a href="https://clips.twitch.tv/AmorphousHelpfulHyenaSeemsGood">beating Catboy Jerma in the 2020 Jerma Rumble.</a> There was a <a href="https://www.strawpoll.me/42372421">double or nothing</a>, <a href="https://clips.twitch.tv/FantasticRenownedWaffleBuddhaBar">Jerma now has to dress up</a> as Catboy Jerma for two streams.</li>
 				</ul>
 			</div>
+			
+			<div class="visualized">
+				<div class="lh">
+					VISUALIZED
+				</div>
+				<canvas id="myChart"></canvas>
+			</div>
 		</div>
 		<footer>
 			<a title="I dont have a ton of excess money for my hobbies, and any donation would help cover the cost of running this site, like domain fees and possibly eventually hosting fees. Any bit helps, and if you dont want to, then thats equally fine. Thanks yall <3" href="https://cash.app/$scryp">Made by Viewers like you &lt;3</a>
 		</footer>
 	</article>
 	<script src="bundle.js"></script>
+	
 	</body>
 </html>
