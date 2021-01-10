@@ -1,5 +1,9 @@
 name: Deploy my website
-on: push
+on:
+  push:
+    branches:    
+      # Push events on master branch
+      - master
 
 jobs:
   deploy:
@@ -15,4 +19,4 @@ jobs:
         CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
 
         CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
-        PURGE_URLS: '["https://debt.jerma.io/styles.css", "https://debt.jerma.io", "https://debt.jerma.io/scripts.js"]'
+        PURGE_URLS: '["https://debt.jerma.io", "https://debt.jerma.io/styles.css", "https://debt.jerma.io/scripts.js"]'
