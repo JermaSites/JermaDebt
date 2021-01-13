@@ -1,9 +1,6 @@
 name: Deploy my website
 on:
-  push:
-    branches:    
-      # Push events on master branch
-      - master
+  page_build
 
 jobs:
   deploy:
