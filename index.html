@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="en">
 	<head>
@@ -45,102 +47,37 @@
 					<h4 class="reason"><b>Reason</b></h4>
 					<h4 class="runningTotal"><b>Running Total</b></h4>
 				</div>
-				<div style="border-top: thin solid #3D3D3D" class="row">
-					<h4 class="date">Nov. 8th 2020</h4>
-					<h4 style="color: #c53929" class="debtChange">+$2,500,000,000</h4>
-					<h4 class="reason">Missed <a href="https://www.twitch.tv/jerma985/clip/AdventurousMiniatureMageKevinTurtle">Noita Shot.</a></h4>
-					<h4 class="runningTotal">$2,500,000,000</h4>
+
+				{% assign debtTotal = 0 %}
+				{% for event in site.data.debt %}
+				
+				<div class="{% cycle 'row', 'row-alt' %}">
+					<h4 class="date">{{ event.Date }}</h4>
+					{% assign classes = 'debtChange ' %}
+
+					{%- if event.Active == "FALSE" -%}
+						{% assign classes = classes | append: 'debtInvalid ' %}
+					{%- else -%}
+						{% assign debtTotal = debtTotal | plus: event.DebtChange %}
+					{%- endif -%}
+
+					{%- if event.DebtChange contains "-" -%}
+						{% assign classes = classes | append: 'debtRemove' %}
+					{%- else -%}
+						{% assign classes = classes | append: 'debtAdd' %}
+					{%- endif -%}
+					
+					<h4 class="{{ classes }}">
+						{%- if event.DebtChange contains "-" -%}
+							-${{ event.DebtChange | slice: 1,event.DebtChange.size | intcomma }} 
+						{%- else -%}
+							+${{ event.DebtChange | intcomma }}
+						{%- endif -%}
+					</h4>
+					<h4 class="reason">{{ event.ReasonMarkdown | markdownify | remove: '<p>' | remove: '</p>' }}</h4>
+					<h4 class="runningTotal">${{debtTotal | intcomma }}</h4>
 				</div>
-				<div class="row-alt">
-					<h4 class="date">Nov. 8th 2020</h4>
-					<h4 style="color: #0b8043" class="debtChange">-$375</h4>
-					<h4 class="reason"><a href="https://youtu.be/YixWlAtvNhk?t=16440">Community Subs.</a> (75)</h4>
-					<h4 class="runningTotal">$2,499,999,625</h4>
-				</div>
-				<div class="row">
-					<h4 class="date">Nov. 9th 2020</h4>
-					<h4 style="color: #0b8043" class="debtChange">-$272,310</h4>
-					<h4 class="reason"><a href="https://youtu.be/USwGGyfczR8">Lego studs</a> (1 USD = 1 LS) 272,310 Lego Studs.</h4>
-					<h4 class="runningTotal">$2,499,727,315</h4>
-				</div>
-				<div class="row-alt">
-					<h4 class="date">Nov. 21st 2020</h4>
-					<h4 style="color: #0b8043" class="debtChange">-$100,000,000</h4>
-					<h4 class="reason"><a href="https://youtu.be/ZNqtvglRdcE?t=20014">Showed Otto</a> :)</h4>
-					<h4 class="runningTotal">$2,399,727,315</h4>
-				</div>
-				<div class="row">
-					<h4 class="date">Nov. 21st 2020</h4>
-					<h4 style="color: #0b8043" class="debtChange">-$100</h4>
-					<h4 class="reason">An <a href="https://youtu.be/MhycXVLPn7I?t=463">apology</a> for calling Jerma a "boring man".</h4>
-					<h4 class="runningTotal">$2,399,727,215</h4>
-				</div>
-				<div class="row-alt">
-					<h4 class="date">Nov. 25th 2020</h4>
-					<h4 style="color: #c53929" class="debtChange">+$250,000,000</h4>
-					<h4 class="reason">Jerma bets 250 million that he <a href="https://youtu.be/BQaSlD_UFRU?t=7300">hasn't said "GAS" more than SAW's script.</a></h4>
-					<h4 class="runningTotal">$2,649,727,215</h4>
-				</div>
-				<div class="row">
-					<h4 class="date">Nov. 25th 2020</h4>
-					<h4 style="color: #c53929" class="debtChange">+$2,649,727,215</h4>
-					<h4 class="reason">The worst <a href="https://youtu.be/BQaSlD_UFRU?t=10675">Deal or No Deal play of all time.</a> Debt doubled.</h4>
-					<h4 class="runningTotal">$5,299,454,430</h4>
-				</div>
-				<div class="row-alt">
-					<h4 class="date">Nov. 27th 2020</h4>
-					<h4 style="color: #0b8043" class="debtChange">-$153,000</h4>
-					<h4 class="reason">All the <a href="https://youtu.be/QIuS5aLu1_M?t=19368">Pizza sales.</a></h4>
-					<h4 class="runningTotal">$5,299,301,430</h4>
-				</div>
-				<div class="row">
-					<h4 class="date">Dec. 1st, 2020</h4>
-					<h4 style="color: #0b8043" class="debtChange">-$30,715.67</h4>
-					<h4 class="reason">For <a href="https://youtu.be/hy6DDkbKDFg?t=21185">¥3,204,259 Yen in Yakuza 0</a> (1 USD = 104.32 JPY, <a href="https://www.exchange-rates.org/Rate/USD/JPY/12-1-2020">exchange rate</a>) on December 1st 2020.</h4>
-					<h4 class="runningTotal">$5,299,270,714</h4>
-				</div>
-				<div class="row-alt">
-					<h4 class="date">Dec. 3rd, 2020</h4>
-					<h4 style="color: #0b8043" class="debtChange">-$250,000,000</h4>
-					<h4 class="reason">For a flawless reading of <a href="https://youtu.be/a9uuyksatqE?t=9996">green eggs and ham.</a></h4>
-					<h4 class="runningTotal">$5,049,270,714</h4>
-				</div>
-				<div class="row">
-					<h4 class="date">Dec. 9th, 2020</h4>
-					<h4 style="color: #f09300;text-decoration: line-through" class="debtChange">+$1,000,000,000</h4>
-					<h4 class="reason">Jerma bets $1 billion that he will <a href="https://youtu.be/5RL0ZY2xpZs?t=6431">finish The Impossible Quiz.</a> Added in error. Thanks for <a href="https://www.reddit.com/r/jerma985/comments/kfw0gd/audit_the_debt/">auditing!</a> ;)</h4>
-					<h4 class="runningTotal">$5,049,270,714</h4>
-				</div>
-				<div class="row-alt">
-					<h4 class="date">Dec 14th, 2020</h4>
-					<h4 style="color: #f09300;text-decoration: line-through" class="debtChange">+$50,000,000,000</h4>
-					<h4 class="reason"><a href="https://clips.twitch.tv/SweetSecretiveLardPermaSmug">Bad self dare and bad hitbox.</a> Reversed: Polls decided (<a href="https://www.strawpoll.me/42283739/r">[1]</a> <a href="https://www.strawpoll.me/42283673/r">[2]</a> <a href="https://www.strawpoll.me/42283794/r">[3]</a>).</h4>
-					<h4 class="runningTotal">$5,049,270,714</h4>
-				</div>
-				<div class="row">
-					<h4 class="date">Jan 1st, 2021</h4>
-					<h4 style="color: #f09300;text-decoration: line-through" class="debtChange">-$1,000,000,000</h4>
-					<h4 class="reason">Beating Catboy Jerma in the <a href="https://clips.twitch.tv/AmorphousHelpfulHyenaSeemsGood">2020 Jerma Rumble.</a> There was a <a href="https://www.strawpoll.me/42372421">double or nothing</a>, Jerma now has to <a href="https://clips.twitch.tv/FantasticRenownedWaffleBuddhaBar">dress up as Catboy Jerma</a> for two streams.</h4>
-					<h4 class="runningTotal">$5,049,270,714</h4>
-				</div>
-				<div class="row-alt">
-					<h4 class="date">Jan. 4th, 2021</h4>
-					<h4 style="color: #0b8043" class="debtChange">-$500,000,000</h4>
-					<h4 class="reason">Doing <a href="https://youtu.be/_r4U50QYbxk?t=9730">Simpsons impressions.</a> <a href="https://www.reddit.com/r/jerma985/comments/kspvwa/discussion_of_the_contested_jerma_debt_removal/">Good points are made.</a></h4>
-					<h4 class="runningTotal">$4,549,270,714</h4>
-				</div>
-				<div class="row">
-					<h4 class="date">Jan. 4th, 2021</h4>
-					<h4 style="color: #0b8043" class="debtChange">-$450,000,000</h4>
-					<h4 class="reason">JermaCraft CopyPasta as the <a href="https://youtu.be/_r4U50QYbxk?t=10052">Family Guy Characters.</a> (-$50m for bad impression).</h4>
-					<h4 class="runningTotal">$4,099,270,714</h4>
-				</div>
-				<div class="row-alt">
-					<h4 class="date">Jan. 6th, 2021</h4>
-					<h4 style="color: #0b8043" class="debtChange">-$100,000,000</h4>
-					<h4 class="reason">Jerma tells his <a href="https://youtu.be/s_PHGbYxQQo?t=16214">daily routine.</a></h4>
-					<h4 class="runningTotal">$3,999,270,714</h4>
-				</div>
+				{% endfor %}
 				
 				<img class="web" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS-con6BSiZaUGjdXjZPTLttijIwQ5hsv4Fs6j0ezArIJbCT2bIo53n2XCM6M8d3tpMZyx3YVZ0RP3z/pubchart?oid=156495628&format=image" alt="">
 				

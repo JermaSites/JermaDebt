@@ -191,6 +191,20 @@ article {
     text-align: center;
     font-weight: normal;
 }
+
+.debtAdd {
+	color: #c53929;
+}
+
+.debtRemove {
+	color: #0b8043;
+}
+
+.debtInvalid {
+	color: #f09300 !important;
+	text-decoration: line-through !important;
+}
+
 .reason {
     width: calc(100% - 457px);
     float: left;
