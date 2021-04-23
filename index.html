@@ -19,12 +19,17 @@
 			</h1>
 		</header>
 		<div class="data-display">
-			<h1 id="debtCounterNum">$</h1>
+			{% assign debtTotal = 0 %}
+			{% for event in site.data.debt %}
+				{%- if event.Active != "FALSE" -%}
+					{% assign debtTotal = debtTotal | plus: event.DebtChange %}
+				{%- endif -%}
+			{% endfor %}			
+			<h1 id="debtCounterNum">${{debtTotal | intcomma }}</h1>
 			<h2 id="debtCounterText">
-				Fifty Four Billion,<br>
-				Five Hundred and Forty-Nine Million,<br>
-				Three Hundred and One Thousand,<br>
-				Four Hundred and Thirty<br>
+				{% assign largenum = 2249970714 %}
+				{% assign numwords = largenum | num2words %}
+				{{ numwords | slice: 1, numwords.size | capitalize_all | replace: "And", "and"}}
 			</h2>
 		</div>
 		<article>
