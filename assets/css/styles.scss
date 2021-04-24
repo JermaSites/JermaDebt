@@ -227,6 +227,20 @@ article {
 footer  {
 	padding-top: 15px;
 	padding-bottom: 15px;
+	text-decoration-style: dotted;
+	a:link {
+		color: #fff;
+		background-color: transparent;
+		text-decoration-style: dotted;
+	}
+	a:visited {
+		color: #fff;
+	}
+	a:hover {
+		color: #d3d3d3;
+		background-color: transparent;
+		text-decoration-style: solid;
+	}
 }
 
 
@@ -286,6 +300,9 @@ footer  {
 	background-color:  #550968;
 	padding-bottom: 30px;
 	padding-top: 20px;
+	padding-left: 10%;
+	padding-right: 10%;
+	height: 75vh !important;
 	.lh {
 		text-align: left;
 		text-align: center;
@@ -296,4 +313,9 @@ footer  {
 		margin-top: -20px;
 		margin-bottom: 5px;
 	}
+}
+
+#lineChart {
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
