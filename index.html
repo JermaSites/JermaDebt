@@ -10,7 +10,6 @@
 		<script src="https://d3js.org/d3.v6.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 		<script src="Chart.min.js"></script>
-		<script type="module" src="flip.js"></script>
 		<!-- <link rel="stylesheet" href="Chart.min.css"> -->
 	</head>
 	<body>
@@ -105,16 +104,7 @@
 	</article>
 	<script src="scripts.js"></script>
 	<script>
-		import from "./flip.js";
-		const Flip = window.Flip;
-		console.log(window.Flip);
-		new window.Flip({
-			node: debtCounterNum,
-			from: 0,
-			to: {{ debtTotal }},
-			separator: ',',
-			duration: 2 // second
-		})
+		{% include bundle.js %}
 	</script>
 	</body>
 </html>
