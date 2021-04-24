@@ -12,4 +12,21 @@ jobs:
       - uses: actions/checkout@v2
       - uses: helaili/jekyll-action@v2
         with:
-          token: ${{ secrets.TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+name: Purge Cloudflare Cache
+on:
+  page_build
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Purge cache
+      uses: jakejarvis/cloudflare-purge-action@master
+      env:
+        CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
+
+        CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
+        PURGE_URLS: '["https://debt.jerma.io", "https://debt.jerma.io/_data/debt.csv", "https://debt.jerma.io/assets/styles.css", "https://debt.jerma.io/scripts.js"]'
