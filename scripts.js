@@ -77,6 +77,11 @@ async function getChart(results) {
 		options: {
 			legend: { display: false },
 			responsive: true,
+			elements: {
+				line: {
+					tension: 0.15
+				}
+			},
 			scales: {
 				xAxes: [{
 					type: 'time',
