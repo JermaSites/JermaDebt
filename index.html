@@ -7,6 +7,11 @@
 		<title>Jerma Debt Tracker</title>
 		<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
 		<link rel="stylesheet" href="assets/css/styles.css">
+		<script src="https://d3js.org/d3.v6.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+		<script src="Chart.min.js"></script>
+		<script type="module" src="flip.js"></script>
+		<!-- <link rel="stylesheet" href="Chart.min.css"> -->
 	</head>
 	<body>
 		<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "8a624e372b2b42baa0649413c7246f5e"}'></script><!-- End Cloudflare Web Analytics -->
@@ -83,11 +88,8 @@
 					<h4 class="runningTotal">${{debtTotal | intcomma }}</h4>
 				</div>
 				{% endfor %}
-				
-				<img class="web" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS-con6BSiZaUGjdXjZPTLttijIwQ5hsv4Fs6j0ezArIJbCT2bIo53n2XCM6M8d3tpMZyx3YVZ0RP3z/pubchart?oid=156495628&format=image" alt="">
-				
-				<img class="mobile" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS-con6BSiZaUGjdXjZPTLttijIwQ5hsv4Fs6j0ezArIJbCT2bIo53n2XCM6M8d3tpMZyx3YVZ0RP3z/pubchart?oid=1001802436&format=image" alt="">
-				
+	
+				<canvas id="lineChart"></canvas>				
 			</section>
 			
 			<div class="visualized">
@@ -101,7 +103,18 @@
 			<a title="I dont have a ton of excess money for my hobbies, and any donation would help cover the cost of running this site, like domain fees and possibly eventually hosting fees. Any bit helps, and if you dont want to, then thats equally fine. Thanks yall <3" href="https://cash.app/$scryp">Made by Viewers like you &lt;3</a>
 		</footer>
 	</article>
-	<script src="bundle.js"></script>
-	
+	<script src="scripts.js"></script>
+	<script>
+		import from "./flip.js";
+		const Flip = window.Flip;
+		console.log(window.Flip);
+		new window.Flip({
+			node: debtCounterNum,
+			from: 0,
+			to: {{ debtTotal }},
+			separator: ',',
+			duration: 2 // second
+		})
+	</script>
 	</body>
 </html>
