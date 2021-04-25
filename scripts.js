@@ -1,5 +1,5 @@
 var converter = require("number-to-words");
-import {confetti} from "canvas-confetti";
+import confetti from "canvas-confetti";
 import {titleCase} from "title-case";
 import {Flip} from "number-flip";
 
@@ -26,29 +26,24 @@ async function readTextFile(file) {
 	debtCounterText.innerHTML = titleCase(converter.toWords(debt)).replace(/, and/g, ",<br>");
 
 	if (debt == 0) {
+		var duration = 15 * 1000;
+		var animationEnd = Date.now() + duration;
+		var defaults = {startVelocity: 30, spread: 360, ticks: 60, zIndex: 0};
+
+		function randomInRange(min, max) {
+			return Math.random() * (max - min) + min;
+		}
+
 		(function frame() {
-			var duration = 15 * 1000;
-			var animationEnd = Date.now() + duration;
-			var defaults = {startVelocity: 30, spread: 360, ticks: 60, zIndex: 0};
 
-			function randomInRange(min, max) {
-				return Math.random() * (max - min) + min;
-			}
+			var timeLeft = animationEnd - Date.now();
 
-			var interval = setInterval(function () {
-				var timeLeft = animationEnd - Date.now();
+			var particleCount = 2 * (timeLeft / duration);
 
-				if (timeLeft <= 0) {
-					return clearInterval(interval);
-				}
+			// since particles fall down, start a bit higher than random
+			confetti(Object.assign({}, defaults, {particleCount, origin: {x: randomInRange(0.1, 0.3), y: Math.random() - 0.2}}));
+			confetti(Object.assign({}, defaults, {particleCount, origin: {x: randomInRange(0.7, 0.9), y: Math.random() - 0.2}}));
 
-				var particleCount = 50 * (timeLeft / duration);
-				// since particles fall down, start a bit higher than random
-				confetti(Object.assign({}, defaults, {particleCount, origin: {x: randomInRange(0.1, 0.3), y: Math.random() - 0.2}}));
-				confetti(Object.assign({}, defaults, {particleCount, origin: {x: randomInRange(0.7, 0.9), y: Math.random() - 0.2}}));
-			}, 250);
-
-			var end = Date.now() + 15 * 1000;
 			var colors = ["#800080", "#008080"];
 			confetti({
 				particleCount: 2,
@@ -65,9 +60,9 @@ async function readTextFile(file) {
 				colors: colors,
 			});
 
-			if (Date.now() < end) {
+			if (Date.now() < animationEnd) {
 				requestAnimationFrame(frame);
 			}
-		});
+		})();
 	}
-});
+})();
