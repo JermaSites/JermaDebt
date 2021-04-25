@@ -622,7 +622,7 @@ async function readTextFile(file) {
   return await resp.text();
 }
 
-(async () => {
+async () => {
   const result = await readTextFile("debt.txt");
   var resultMinusNum = result.replace(/\D/g, "");
   var debt = Number(resultMinusNum);
@@ -637,53 +637,48 @@ async function readTextFile(file) {
 
   });
   debtCounterText.innerHTML = (0, _titleCase.titleCase)(converter.toWords(debt)).replace(/, and/g, ",<br>");
-})(async () => {
-  const result = await readTextFile("debt.txt");
-  var resultMinusNum = result.replace(/\D/g, "");
-  var debt = Number(resultMinusNum);
 
   if (debt == 0) {
-    var duration = 15 * 1000;
-    var animationEnd = Date.now() + duration;
-    var defaults = {
-      startVelocity: 30,
-      spread: 360,
-      ticks: 60,
-      zIndex: 0
-    };
+    (function frame() {
+      var duration = 15 * 1000;
+      var animationEnd = Date.now() + duration;
+      var defaults = {
+        startVelocity: 30,
+        spread: 360,
+        ticks: 60,
+        zIndex: 0
+      };
 
-    function randomInRange(min, max) {
-      return Math.random() * (max - min) + min;
-    }
-
-    var interval = setInterval(function () {
-      var timeLeft = animationEnd - Date.now();
-
-      if (timeLeft <= 0) {
-        return clearInterval(interval);
+      function randomInRange(min, max) {
+        return Math.random() * (max - min) + min;
       }
 
-      var particleCount = 50 * (timeLeft / duration); // since particles fall down, start a bit higher than random
+      var interval = setInterval(function () {
+        var timeLeft = animationEnd - Date.now();
 
-      confetti(Object.assign({}, defaults, {
-        particleCount,
-        origin: {
-          x: randomInRange(0.1, 0.3),
-          y: Math.random() - 0.2
+        if (timeLeft <= 0) {
+          return clearInterval(interval);
         }
-      }));
-      confetti(Object.assign({}, defaults, {
-        particleCount,
-        origin: {
-          x: randomInRange(0.7, 0.9),
-          y: Math.random() - 0.2
-        }
-      }));
-    }, 250);
-    var end = Date.now() + 15 * 1000;
-    var colors = ['#800080', '#008080'];
 
-    (function frame() {
+        var particleCount = 50 * (timeLeft / duration); // since particles fall down, start a bit higher than random
+
+        confetti(Object.assign({}, defaults, {
+          particleCount,
+          origin: {
+            x: randomInRange(0.1, 0.3),
+            y: Math.random() - 0.2
+          }
+        }));
+        confetti(Object.assign({}, defaults, {
+          particleCount,
+          origin: {
+            x: randomInRange(0.7, 0.9),
+            y: Math.random() - 0.2
+          }
+        }));
+      }, 250);
+      var end = Date.now() + 15 * 1000;
+      var colors = ["#800080", "#008080"];
       confetti({
         particleCount: 2,
         angle: 60,
@@ -706,8 +701,8 @@ async function readTextFile(file) {
       if (Date.now() < end) {
         requestAnimationFrame(frame);
       }
-    })();
+    });
   }
-})();
+};
 
 },{"canvas-confetti":1,"number-flip":2,"number-to-words":3,"title-case":4}]},{},[5]);
