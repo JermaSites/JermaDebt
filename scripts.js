@@ -26,11 +26,13 @@ async function readTextFile(file) {
 	debtCounterText.innerHTML = titleCase(converter.toWords(debt)).replace(/, and/g, ",<br>");
 
 	if (debt == 0) {
-		var duration = 15 * 1000;
+		setTimeout(function(){},2000);
+		var duration = 15000;
 		var animationEnd = Date.now() + duration;
-		var defaults = {startVelocity: 30, spread: 360, ticks: 60, zIndex: 0};
-
-		function randomInRange(min, max) {
+		var colors = ["#a64ca6", "#4ca6a6"];
+		var defaults = {startVelocity: 30, spread: 360, ticks: 60, zIndex: 0, scalar: 1.5, colors: colors,};
+		  
+		  function randomInRange(min, max) {
 			return Math.random() * (max - min) + min;
 		}
 
@@ -38,25 +40,30 @@ async function readTextFile(file) {
 
 			var timeLeft = animationEnd - Date.now();
 
-			var particleCount = 2 * (timeLeft / duration);
+			var particleCount = 4 * (timeLeft / duration);
 
 			// since particles fall down, start a bit higher than random
-			confetti(Object.assign({}, defaults, {particleCount, origin: {x: randomInRange(0.1, 0.3), y: Math.random() - 0.2}}));
-			confetti(Object.assign({}, defaults, {particleCount, origin: {x: randomInRange(0.7, 0.9), y: Math.random() - 0.2}}));
+			confetti(Object.assign({}, defaults, {particleCount, origin: {x: randomInRange(0.3, 0.5), y: Math.random() +.1 }}));
+			confetti(Object.assign({}, defaults, {particleCount, origin: {x: randomInRange(0.5, 0.7), y: Math.random() +.1 }}));
 
-			var colors = ["#800080", "#008080"];
+			//side confetti
+			
 			confetti({
 				particleCount: 2,
-				angle: 60,
+				angle: 50,
 				spread: 55,
 				origin: {x: 0},
+				scalar: 1.5,
+				ticks: 400,
 				colors: colors,
 			});
 			confetti({
 				particleCount: 2,
-				angle: 120,
+				angle: 130,
 				spread: 55,
 				origin: {x: 1},
+				scalar: 1.5,
+				ticks: 400,
 				colors: colors,
 			});
 
