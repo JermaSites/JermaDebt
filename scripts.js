@@ -1,5 +1,5 @@
 var converter = require("number-to-words");
-var confetti = require("canvas-confetti");
+import {confetti} from "canvas-confetti";
 import {titleCase} from "title-case";
 import {Flip} from "number-flip";
 
