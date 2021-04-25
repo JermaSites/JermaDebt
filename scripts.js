@@ -26,7 +26,6 @@ async function readTextFile(file) {
 	debtCounterText.innerHTML = titleCase(converter.toWords(debt)).replace(/, and/g, ",<br>");
 
 	if (debt == 0) {
-		setTimeout(function(){},2000);
 		var duration = 15000;
 		var animationEnd = Date.now() + duration;
 		var colors = ["#a64ca6", "#4ca6a6"];
