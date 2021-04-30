@@ -1,0 +1,355 @@
+---
+---
+
+$purple-one: #190019;
+$purple-two: #110011;
+
+/* ubuntu-regular - latin */
+@font-face {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 400;
+	src: 
+		url('../fonts/ubuntu-v15-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		url('../fonts/ubuntu-v15-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  /* ubuntu-700 - latin */
+  @font-face {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 700;
+	src:
+		url('../fonts/ubuntu-v15-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		url('../fonts/ubuntu-v15-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+	margin: 0;
+}
+
+/* Header Bar and Text */
+header {
+	text-align: center;
+	padding: 5px;
+	font-weight: normal;
+	background-color: #69bbc3;
+	color: white;
+	font-family: 'Ubuntu',sans-serif;
+	height: 11vh;
+	font-size: 3vh;
+	display: flex;
+    justify-content: center;
+	align-items: center;
+}
+
+.data-display {
+	height: 89vh;
+	background-image:url("../images/jermass.png");
+	background-size: cover;
+	background-attachment: fixed;
+	background-position-x: center;
+	background-position-y: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: #ffffff;
+	font-family: 'Ubuntu',sans-serif;
+	h1 {
+		margin: 10px;
+		font-size: 12.5vw;
+		font-weight: 700;
+	}
+	/* Amount in Words */
+	h2 {
+		text-align: center;
+		line-height: 200%;
+		margin: 5px;
+		font-size: 150%;
+	}
+}
+
+/* History of the debt text */
+article {
+    font-family: 'Ubuntu',sans-serif;
+    font-size: 150%;
+    line-height: 200%;
+    text-align: center;
+    background-color: #404040;
+    color: white;
+	.intro {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		padding-left: 10%;
+		padding-right: 10%;
+		text-align: center;
+		color: #fff;
+		p {
+			font-size: 20px;
+		}
+	}
+	/* Poll Zone */
+	.notice {
+		font-family: ubuntu,sans-serif;
+		font-size: 100%;
+		padding: 15px;
+		text-align: center;
+		background-color: #2c2c2c;
+		color: #fff;
+		word-wrap: normal;
+		h1 {
+			text-decoration-style: dotted;
+			a:link {
+				color: #fff;
+				background-color: transparent;
+				text-decoration-style: dotted;
+			}
+			a:visited {
+				color: #fff;
+			}
+			a:hover {
+				color: #d3d3d3;
+				background-color: transparent;
+				text-decoration-style: solid;
+			}
+		}
+	}
+}
+
+.head-link{
+	color: white;
+	background-color: transparent;
+	text-decoration: none;
+	&:visited,&:active,&:hover,&:focus {
+		color: white;
+		background-color: transparent;
+		text-decoration: none;
+	}
+}
+
+.debt {
+	font-size: 16px;
+    background-color: $purple-one;
+	a:link {
+		color: #45c1ff;
+		background-color: transparent;
+		text-decoration: none;
+	}
+	a:visited {
+		color: #82A3DD;
+		background-color: transparent;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #FFFFFF;
+		background-color: transparent;
+		text-decoration: underline;
+	}
+	a:active {
+		color: #ff4545;
+		background-color: transparent;
+		text-decoration: underline;    
+	}
+	h1 {
+		padding-left: 8px;
+		font-size: 30px;
+		margin-top: 0px;
+		padding-top: 30px;
+		margin-bottom: 0px;
+		padding-bottom: 20px;
+		text-align: left;
+	}
+}
+
+#div-wrapper {
+	width: 80%;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.headerRow  {
+    width: 100%;
+    float: left;
+    border-top: thin solid #3D3D3D;
+    background-color: #2f192f;
+}
+.runningTotal {
+    margin: 0px;
+    padding: 8px;
+    width: 124px;
+    float: left;
+    text-align: right;
+    font-weight: normal;
+}
+.row {
+    width: 100%;
+    float: left;
+    border-bottom: thin solid #3D3D3D;
+}
+.row-alt {
+    width: 100%;
+    float: left;
+    border-bottom: thin solid #3D3D3D;
+	background-color: #2f192f;
+}
+.date {
+    padding: 8px;
+    margin: 0px;
+    width: 110px;
+    float: left;
+    text-align: left;
+    font-weight: normal;
+	white-space: nowrap;
+}
+.debtChange {
+    padding: 8px;
+    margin: 0px;
+    width: 159px;
+    float: left;
+    text-align: center;
+    font-weight: normal;
+}
+
+.debtAdd {
+	color: #c53929;
+}
+
+.debtRemove {
+	color: #0b8043;
+}
+
+.debtInvalid {
+	color: #f09300 !important;
+	text-decoration: line-through !important;
+}
+
+.reason {
+    width: calc(100% - 457px);
+    float: left;
+    padding: 8px;
+    margin: 0px;
+    text-align: left;
+    font-weight: normal;
+}
+.web {
+    width: 86%;
+    padding-top: 30px;
+	padding-bottom: 20px;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.mobile {
+	display: none;
+}
+footer  {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-decoration-style: dotted;
+	a:link {
+		color: #fff;
+		background-color: transparent;
+		text-decoration-style: dotted;
+	}
+	a:visited {
+		color: #fff;
+	}
+	a:hover {
+		color: #d3d3d3;
+		background-color: transparent;
+		text-decoration-style: solid;
+	}
+
+	span {
+		display: inline-block;
+	}
+}
+
+
+@media screen and (max-width: 1250px) {
+	.web{
+		width: 100%;
+		padding-left: 0%;
+		padding-right: 0%;
+		padding-top: 30px;
+		padding-bottom: 20px;
+	}
+	#div-wrapper {
+		width: 90%;
+		padding-left: 5%;
+		padding-right: 5%;
+		line-height: 150%;
+	}
+}
+
+@media screen and (max-width: 780px) {
+	#div-wrapper {
+		width: 90%;
+		padding-left: 5%;
+		padding-right: 5%;
+		line-height: 125%;
+	}
+	.reason {
+		width: calc(100% - 156px);
+	}
+	.date{
+		width: calc(50% - 16px);
+		padding: 8px 8px 0px 8px;
+		font-weight: bold;
+	}
+	.debtChange{
+		width: calc(50% - 16px);
+		text-align: right;
+		padding: 8px 8px 0px 8px;
+		font-weight: bold;
+	}
+	.headerRow{
+		display: none;
+	}
+	.web{
+		display: none;
+	}
+	.mobile{
+		display: initial;
+		width: 100%;
+		padding-top: 30px;
+		padding-bottom: 20px;
+	}
+}
+
+/* Visualized Title */
+
+.visualized {
+	text-align: left;
+	background-color:  #550968;
+	padding-bottom: 30px;
+	padding-top: 20px;
+	padding-left: 10%;
+	padding-right: 10%;
+	height: 75vh !important;
+	.lh {
+		text-align: left;
+		text-align: center;
+		font-size: 105%;
+		width: 100vw;
+		background-color: #530866;
+		margin-left: -10.5vw;
+		margin-top: -20px;
+		margin-bottom: 5px;
+	}
+}
+
+#lineChart {
+	padding-top: 5rem;
+	padding-bottom: 3rem;
+	// padding-left: 10%;
+	// padding-right: 10%;
+	background-color: $purple-two;
+}
