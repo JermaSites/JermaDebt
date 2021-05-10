@@ -28,7 +28,7 @@ async function getChart(results) {
 			event.push(paidDebt);
 			eventReason.push(item.Reason);
 			event.reduce(function(a,b,i) { return additiveDebt[i] = a+b; }, 0);
-			time.push(new Date(item.Time*1000));
+			time.push(item.Date);
 			if(item.DebtChange < 0) {
 				allPaid.push(paidDebt);
 				labels.push(item.Reason);
@@ -84,6 +84,9 @@ async function getChart(results) {
 			scales: {
 				xAxes: [{
 					type: 'time',
+					time: {
+						parser: "MMM. Do, YYYY",
+					},
 					ticks: {
 						fontSize: 18,
 						maxTicksLimit: 20
@@ -108,8 +111,9 @@ async function getChart(results) {
 				enabled: true,
 				mode: 'single',
 				callbacks: {
-					title: function(tooltipItems, data) { 
-						return new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'long' }).format(data.labels[tooltipItems[0].index]);
+					title: function(tooltipItems, data) {
+						return data.labels[tooltipItems[0].index]
+						// return new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'long' }).format(data.labels[tooltipItems[0].index]);
 					},
 					label: function(tooltipItem) { 
 						return ('$' + additiveDebt[tooltipItem.index].toLocaleString()).replace("$-", "-$");
