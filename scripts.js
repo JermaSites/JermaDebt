@@ -20,7 +20,6 @@ async function getChart(results) {
 			}
 		}
 	}
-	console.log(totalEvents);
 
 	// Color of paid debts
 	for(var item of results) {
@@ -47,18 +46,6 @@ async function getChart(results) {
 	eventReason.push("Current Day");
 	time.push(new Date());
 
-	
-	// var gradient = ctx.createRadialGradient(0, 0, 1090, 500, 500, 100);
-	// gradient.addColorStop(0, 'rgba(126, 26, 150,100)');
-	// gradient.addColorStop(0.5, 'rgba(172, 41, 204,100)');   
-	// gradient.addColorStop(1, 'rgba(223, 94, 255,100)');
-
-	// var borderGradient = ctx.createRadialGradient(0, 0, 1090, 500, 500, 100);
-	// borderGradient.addColorStop(0, 'rgba(131, 58, 180,100)');
-	// borderGradient.addColorStop(0.5, 'rgba(253, 29, 29,100)');   
-	// borderGradient.addColorStop(1, 'rgba(252, 176, 69,100)');
-	// colors.push(gradient);
-
 	new Chart(ctxLine, {
 		type: 'line',
 		data: {
@@ -70,6 +57,7 @@ async function getChart(results) {
 				borderColor: 'rgb(75, 192, 192)',
 				backgroundColor: 'rgba(28,59,80,0.5)',
 				fill: true,
+				tension: 0
 			}]
 		},
 		
@@ -78,7 +66,6 @@ async function getChart(results) {
 			responsive: true,
 			onResize: function(chart, size) {
 				chart.update();
-				console.log(chart);
 				chart.padding = {
 					// top: 5 * (parseInt(getComputedStyle(document.getElementById("lineChart")).fontSize)),
 					// bottom: 3 * (parseInt(getComputedStyle(document.getElementById("lineChart")).fontSize)),					
