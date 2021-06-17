@@ -14,8 +14,6 @@ Submit a PR with a new entry in `_data/debt.csv`
 
 `Date` is a short date corresponding to when the change happened in the format of `Jan. 1st, 1970`
 
-`Time` is a [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) corresponding to when the change happened. It isn't necessary to be 100% accurate with the time but it is preferable.
-
 `Reason` is a very short summary to be used on graphs and the like.
 
 `ReasonMarkdown` is a longer summary with markdown support to add citation URLs.
