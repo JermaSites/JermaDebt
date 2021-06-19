@@ -55,7 +55,7 @@ module NumbersInWords
       # e.g. 113 splits into "one hundred" and "thirteen"
       output = ''
       group_words(group) do |power, name, digits|
-        output = output + ',' 
+        # output = output + ',' 
         if digits.positive?
           prefix = ' '
           # no and between thousands and hundreds

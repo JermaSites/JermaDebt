@@ -32,7 +32,7 @@
 			<h1 id="debtCounterNum">${{debtTotal | intcomma }}</h1>
 			<h2 id="debtCounterText">
 				{% assign numwords = debtTotal | num2words %}
-				{{ numwords | slice: 1, numwords.size | capitalize_all | replace: "And", "and"}}
+				{{ numwords | capitalize_all | replace: "And", "and"}}
 			</h2>
 		</div>
 		<article>
