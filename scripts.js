@@ -85,7 +85,7 @@ async function getChart(results) {
 				xAxes: [{
 					type: 'time',
 					time: {
-						parser: "MMM. Do, YYYY",
+						parser: "YYYY-MM-DD",
 					},
 					ticks: {
 						fontSize: 18,
