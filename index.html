@@ -25,8 +25,8 @@
 		<div class="data-display">
 			{% assign debtTotal = 0 %}
 			{% for event in site.data.debt %}
-				{%- if event.Active != "FALSE" -%}
-					{% assign debtTotal = debtTotal | plus: event.DebtChange %}
+				{%- if event.active != "FALSE" -%}
+					{% assign debtTotal = debtTotal | plus: event.debtChange %}
 				{%- endif -%}
 			{% endfor %}			
 			<h1 id="debtCounterNum">${{debtTotal | intcomma }}</h1>
@@ -62,29 +62,29 @@
 					{% for event in site.data.debt %}
 					
 					<div class="{% cycle 'row', 'row-alt' %}">
-						<h4 class="date">{{ event.Date }}</h4>
+						<h4 class="date">{{ event.date }}</h4>
 						{% assign classes = 'debtChange ' %}
 	
-						{%- if event.Active == "FALSE" -%}
+						{%- if event.active == "FALSE" -%}
 							{% assign classes = classes | append: 'debtInvalid ' %}
 						{%- else -%}
-							{% assign debtTotal = debtTotal | plus: event.DebtChange %}
+							{% assign debtTotal = debtTotal | plus: event.debtChange %}
 						{%- endif -%}
 	
-						{%- if event.DebtChange contains "-" -%}
+						{%- if event.debtChange contains "-" -%}
 							{% assign classes = classes | append: 'debtRemove' %}
 						{%- else -%}
 							{% assign classes = classes | append: 'debtAdd' %}
 						{%- endif -%}
 						
 						<h4 class="{{ classes }}">
-							{%- if event.DebtChange contains "-" -%}
-								-${{ event.DebtChange | slice: 1,event.DebtChange.size | intcomma }} 
+							{%- if event.debtChange contains "-" -%}
+								-${{ event.debtChange | slice: 1,event.debtChange.size | intcomma }} 
 							{%- else -%}
-								+${{ event.DebtChange | intcomma }}
+								+${{ event.debtChange | intcomma }}
 							{%- endif -%}
 						</h4>
-						<h4 class="reason">{{ event.ReasonMarkdown | markdownify | remove: '<p>' | remove: '</p>' }}</h4>
+						<h4 class="reason">{{ event.reasonMarkdown | markdownify | remove: '<p>' | remove: '</p>' }}</h4>
 						<h4 class="runningTotal">${{debtTotal | intcomma }}</h4>
 					</div>
 					{% endfor %}
