@@ -14,8 +14,8 @@ async function getChart(results) {
 	var totalEvents = 0;
 	//how much should we change each colour by?
 	for(var item of results) {
-		if(item.Active == "TRUE") {
-			if(item.DebtChange < 0) {
+		if(item.active == "TRUE") {
+			if(item.debtChange < 0) {
 				totalEvents++;
 			}
 		}
@@ -23,15 +23,15 @@ async function getChart(results) {
 
 	// Color of paid debts
 	for(var item of results) {
-		if(item.Active == "TRUE") {
-			var paidDebt = Number(item.DebtChange);
+		if(item.active == "TRUE") {
+			var paidDebt = Number(item.debtChange);
 			event.push(paidDebt);
-			eventReason.push(item.Reason);
+			eventReason.push(item.reason);
 			event.reduce(function(a,b,i) { return additiveDebt[i] = a+b; }, 0);
-			time.push(item.Date);
-			if(item.DebtChange < 0) {
+			time.push(item.date);
+			if(item.debtChange < 0) {
 				allPaid.push(paidDebt);
-				labels.push(item.Reason);
+				labels.push(item.reason);
 				colors.push(dynamicColors(count));
 				count += Math.round(((100 / totalEvents) * 2)); //change extremes between colors
 			}
