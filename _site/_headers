@@ -1,5 +1,5 @@
 /*
-  Permissions-Policy: interest-cohort=()
+  Permissions-Policy: browsing-topics=()
   
 https://:debt.pages.dev/*
   X-Robots-Tag: noindex
